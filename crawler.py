@@ -7,7 +7,7 @@ def main():
     with open('maple_name.txt', 'w', encoding='utf-8') as f:
         driver = webdriver.Chrome('./chromedriver')
         driver.implicitly_wait(1)
-        for page in trange(1, 10):
+        for page in trange(1, 10): ## page number
             driver.get(f"https://maplestory.nexon.com/Ranking/World/Total?page={page}")
             for i in range(1, 11):
                 temp = driver.find_element_by_xpath(
